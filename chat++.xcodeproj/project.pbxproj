@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04CC5F752AB146B90095473B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5F742AB146B90095473B /* main.cpp */; };
+		04CC5F7D2AB147110095473B /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5F7B2AB147110095473B /* client.cpp */; };
+		04CC5F802AB147200095473B /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5F7E2AB147200095473B /* server.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		04CC5F712AB146B90095473B /* chat++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "chat++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC5F742AB146B90095473B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		04CC5F7B2AB147110095473B /* client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = client.cpp; sourceTree = "<group>"; };
+		04CC5F7C2AB147110095473B /* client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = client.hpp; sourceTree = "<group>"; };
+		04CC5F7E2AB147200095473B /* server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
+		04CC5F7F2AB147200095473B /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,11 @@
 		04CC5F732AB146B90095473B /* chat++ */ = {
 			isa = PBXGroup;
 			children = (
+				04CC5F7B2AB147110095473B /* client.cpp */,
+				04CC5F7C2AB147110095473B /* client.hpp */,
 				04CC5F742AB146B90095473B /* main.cpp */,
+				04CC5F7E2AB147200095473B /* server.cpp */,
+				04CC5F7F2AB147200095473B /* server.hpp */,
 			);
 			path = "chat++";
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CC5F802AB147200095473B /* server.cpp in Sources */,
+				04CC5F7D2AB147110095473B /* client.cpp in Sources */,
 				04CC5F752AB146B90095473B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +253,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85Y2N4Y75F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.14.0/include,
+					/opt/homebrew/Cellar/boost/1.82.0_1/include,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.14.0,
+					/opt/homebrew/Cellar/boost/1.82.0_1,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +271,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85Y2N4Y75F;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.14.0/include,
+					/opt/homebrew/Cellar/boost/1.82.0_1/include,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					/opt/homebrew/Cellar/googletest/1.14.0,
+					/opt/homebrew/Cellar/boost/1.82.0_1,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
